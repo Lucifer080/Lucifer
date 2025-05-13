@@ -47,6 +47,11 @@ app.get("/api/start", (req, res) => {
   sendLoop();
 });
 
+app.get("/", (req, res) => {
+    console.log("Hello");  
+});
+
+
 // Stop sending loop
 app.get("/api/stop", (req, res) => {
   if (!isSending) {
