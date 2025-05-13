@@ -74,15 +74,15 @@ async function sendLoop() {
         if (!isSending) break;
 
         await sendVehicle(vehicle);
-        await wait(3000); // Delay between vehicles
+        // await wait(3000); // Delay between vehicles
       }
     } catch (err) {
       console.error("❌ Error fetching data:", err.message);
-      isSending = false;
+      // isSending = false;
       break;
     }
 
-    // await wait(10000); // Wait before next full cycle
+    await wait(3000); // Wait before next full cycle
   }
 
   console.log("🔁 Sending loop stopped");
