@@ -74,7 +74,7 @@ async function sendLoop() {
         if (!isSending) break;
 
         await sendVehicle(vehicle);
-        // await wait(`${vehicle.second}*1`); // Delay between vehicles
+        await wait(3000); // Delay between vehicles
       }
     } catch (err) {
       console.error("❌ Error fetching data:", err.message);
