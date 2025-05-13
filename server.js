@@ -139,9 +139,9 @@ function sendVehicle(vehicle) {
 }
 
 // Delay function
-// function wait(ms) {
-//   return new Promise((resolve) => setTimeout(resolve, ms));
-// }
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 // API to receive form data
 app.post("/api/submit", (req, res) => {
