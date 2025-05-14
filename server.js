@@ -118,8 +118,9 @@ function sendVehicle(vehicle) {
       console.warn(`⚠️ Skipping incomplete data for ${vehicleNumber}`);
       return resolve();
     }
-
-    const dataString = `\$NRM,WTEX,1.ONTC,NR,01,L,${imei},${vehicleNumber},1,${formatDateIST},${formatTimeUTC},${lat},N,${lng},E,0.0,229.84,27,0114.04,2.00,0.41,Vodafone,0,1,25.4,4.0,0,C,22,404,05,16c5,895b,16,16c5,8959,15,16c5,8aff,15,16c5,8afe,10,16c5,895a,0000,00,047834,5400.000,0.000,1450.092,()*D4`;
+                        
+    const dataString = `\$NRM,ACT1,1.72CT,NR,01,L,${imei},${vehicleNumber},1,${formatDateIST},${formatTimeUTC},${lat},N,${lng},E,25.0,105.08,44,72.0,0.80,0.40,Airtel,1,1,27.2,4.4,0,C,9,404,57,064F,85F4,05,172E,E8DD,00,0000,0000,00,0000,0000,00,0000,0000,1000,00,1238,267,000077,40413.290,-,-,-,-,5_5_5_5_0,B1A57767*`;
+    // const dataString = `\$NRM,WTEX,1.ONTC,NR,01,L,${imei},${vehicleNumber},1,${formatDateIST},${formatTimeUTC},${lat},N,${lng},E,0.0,229.84,27,0114.04,2.00,0.41,Vodafone,0,1,25.4,4.0,0,C,22,404,05,16c5,895b,16,16c5,8959,15,16c5,8aff,15,16c5,8afe,10,16c5,895a,0000,00,047834,5400.000,0.000,1450.092,()*D4`;
 
     const client = new net.Socket();
     console.log(dataString);
